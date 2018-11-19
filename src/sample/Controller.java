@@ -19,8 +19,7 @@ public class Controller {
     public Label l4;
     public Label l5;
 
-    double f2(double A1,double A2,double f1,double f2,int k,double t)
-    {
+    double f2(double A1, double A2, double f1, double f2, int k, double t) {
         return A1 * Math.cos(2 * Math.PI * f1 * k * t) + A2 * Math.cos(2 * Math.PI * f2 * t);
     }
 
@@ -90,13 +89,13 @@ public class Controller {
         }
         kv(x);
         writeArrayToFile(x);
-        l1.setText("Максимальна частота сигналу = " +  f1);
+        l1.setText("Максимальна частота сигналу = " + f1);
         l2.setText("Частота дискретизації = " + v);
         l3.setText("Період дискретизації = " + dt);
         l4.setText("Кількість рівнів квантування = " + "2^16");
         l5.setText("Кількість чисел у створенному сигналі = " + x.length);
-        System.out.println("Тривалість = "+t +"s");
-        System.out.println("Розмір = "+(1024 * 2) + "byte" );
+        System.out.println("Тривалість = " + t + "s");
+        System.out.println("Розмір = " + (1024 * 2) + "byte");
 
         new ZoomManager(pane, line1, series);
 
